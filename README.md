@@ -1,7 +1,4 @@
-# Data Portfolio: Excel to Power BI 
-
-
-![excel-to-powerbi-animated-diagram](assets/images/kaggle_to_powerbi.gif)
+## Top UK YouTubers Channel Analysis
 
 
 
@@ -35,13 +32,13 @@
 - [Conclusion](#conclusion)
 
 
-
+---
 
 # Objective 
 
 - What is the key pain point? 
 
-The Head of Marketing wants to find out who the top YouTubers are in 2024 to decide on which YouTubers would be best to run marketing campaigns throughout the rest of the year.
+The Head of Marketing wants to find out who the top YouTubers are in 2024 to decide which YouTubers would be best to run marketing campaigns throughout the rest of the year.
 
 
 - What is the ideal solution? 
@@ -56,13 +53,13 @@ This will help the marketing team make informed decisions about which YouTubers 
 
 ## User story 
 
-As the Head of Marketing, I want to use a dashboard that analyses YouTube channel data in the UK . 
+As the Head of Marketing, I want to use a dashboard that analyses YouTube channel data in the UK. 
 
-This dashboard should allow me to identify the top performing channels based on metrics like subscriber base and average views. 
+This dashboard should allow me to identify the top-performing channels based on metrics like subscriber base and average views. 
 
-With this information, I can make more informed decisions about which Youtubers are right to collaborate with, and therefore maximize how effective each marketing campaign is.
+With this information, I can make more informed decisions about which YouTubers are right to collaborate with, and therefore maximize how effective each marketing campaign is.
 
-
+---
 # Data source 
 
 - What data is needed to achieve our objective?
@@ -82,7 +79,7 @@ The data is sourced from Kaggle (an Excel extract), [see here to find it.](https
 # Stages
 
 - Design
-- Developement
+- Development
 - Testing
 - Analysis 
  
@@ -118,10 +115,6 @@ Some of the data visuals that may be appropriate in answering our questions incl
 
 
 
-
-![Dashboard-Mockup](assets/images/dashboard_mockup.png)
-
-
 ## Tools 
 
 
@@ -131,8 +124,9 @@ Some of the data visuals that may be appropriate in answering our questions incl
 | SQL Server | Cleaning, testing, and analyzing the data |
 | Power BI | Visualizing the data via interactive dashboards |
 | GitHub | Hosting the project documentation and version control |
-| Mokkup AI | Designing the wireframe/mockup of the dashboard | 
 
+
+---
 
 # Development
 
@@ -152,7 +146,7 @@ Some of the data visuals that may be appropriate in answering our questions incl
 
 ## Data exploration notes
 
-This is the stage where you have a scan of what's in the data, errors, inconcsistencies, bugs, weird and corrupted characters etc  
+This is the stage where you have a scan of what's in the data, errors, inconsistencies, bugs, weird and corrupted characters etc  
 
 
 - What are your initial observations with this dataset? What's caught your attention so far? 
@@ -163,11 +157,10 @@ This is the stage where you have a scan of what's in the data, errors, inconcsis
 4. We have more data than we need, so some of these columns would need to be removed
 
 
-
-
+---
 
 ## Data cleaning 
-- What do we expect the clean data to look like? (What should it contain? What contraints should we apply to it?)
+- What do we expect the clean data to look like? (What should it contain? What constraints should we apply to it?)
 
 The aim is to refine our dataset to ensure it is structured and ready for analysis. 
 
@@ -198,13 +191,12 @@ And here is a tabular representation of the expected schema for the clean data:
 - What steps are needed to clean and shape the data into the desired format?
 
 1. Remove unnecessary columns by only selecting the ones you need
-2. Extract Youtube channel names from the first column
+2. Extract YouTube channel names from the first column
 3. Rename columns using aliases
 
 
 
-
-
+---
 
 
 ### Transform the data 
@@ -274,7 +266,7 @@ FROM
 
 ```
 
-![Row count check](assets/images/1_row_count_check.png)
+![Row count check](assets/images/1_row_check.png)
 
 
 
@@ -282,7 +274,7 @@ FROM
 ### SQL query 
 ```sql
 /*
-# Count the total number of columns (or fields) are in the SQL view
+# Count the total number of columns (or fields) in the SQL view
 */
 
 
@@ -294,7 +286,7 @@ WHERE
     TABLE_NAME = 'view_uk_youtubers_2024'
 ```
 ### Output 
-![Column count check](assets/images/2_column_count_check.png)
+![Column count check](assets/images/2_column _check.png)
 
 
 
@@ -315,7 +307,7 @@ WHERE
     TABLE_NAME = 'view_uk_youtubers_2024';
 ```
 ### Output
-![Data type check](assets/images/3_data_type_check.png)
+![Data type check](assets/images/3_data_type _check.png)
 
 
 ## Duplicate count check
@@ -343,8 +335,9 @@ HAVING
     COUNT(*) > 1;
 ```
 ### Output
-![Duplicate count check](assets/images/4_duplicate_records_check.png)
+![Duplicate count check](assets/images/4_duplicate _record_check.png)
 
+---
 # Visualization 
 
 
@@ -352,7 +345,7 @@ HAVING
 
 - What does the dashboard look like?
 
-![GIF of Power BI Dashboard](assets/images/top_uk_youtubers_2024.gif)
+![GIF of Power BI Dashboard](assets/images/top_uk_youtubers_analsis_2024_dashboard.png)
 
 This shows the Top UK Youtubers in 2024 so far. 
 
@@ -509,7 +502,7 @@ Here are the key questions we need to answer for our marketing client:
 | 2    | Jessie J        | 110,416.67                  |
 | 3    | Dua Lipa        | 104,954.95                  |
 
-
+---
 
 
 ### Notes
@@ -806,9 +799,7 @@ ORDER BY
 
 ## Discovery
 
-- What did we learn?
-
-We discovered that 
+- Insights
 
 
 1. NoCopyrightSOunds, Dan Rhodes and DanTDM are the channnels with the most subscribers in the UK
@@ -816,15 +807,15 @@ We discovered that
 3. DanTDM, Dan RHodes and Mister Max are the channels with the most views
 4. Entertainment channels are useful for broader reach, as the channels posting consistently on their platforms and generating the most engagement are focus on entertainment and music 
 
-
+---
 
 
 ## Recommendations 
 
-- What do you recommend based on the insights gathered? 
+- Recommendation based on the insights gathered? 
   
-1. Dan Rhodes is the best YouTube channel to collaborate with if we want to maximize visbility because this channel has the most YouTube subscribers in the UK
-2. Although GRM Daily, Man City and Yogcasts are regular publishers on YouTube, it may be worth considering whether collaborating with them with the current budget caps are worth the effort, as the potential return on investments is significantly lower compared to the other channels.
+1. Dan Rhodes is the best YouTube channel to collaborate with if we want to maximize visibility because this channel has the most YouTube subscribers in the UK
+2. Although GRM Daily, Man City, and Yogcasts are regular publishers on YouTube, it may be worth considering whether collaborating with them with the current budget caps are worth the effort, as the potential return on investments is significantly lower compared to the other channels.
 3. Mister Max is the best YouTuber to collaborate with if we're interested in maximizing reach, but collaborating with DanTDM and Dan Rhodes may be better long-term options considering the fact that they both have large subscriber bases and are averaging significantly high number of views.
 4. The top 3 channels to form collaborations with are NoCopyrightSounds, DanTDM and Dan Rhodes based on this analysis, because they attract the most engagement on their channels consistently.
 
@@ -833,27 +824,27 @@ We discovered that
 - What ROI do we expect if we take this course of action?
 
 1. Setting up a collaboration deal with Dan Rhodes would make the client a net profit of $1,065,000 per video
-2. An influencer marketing contract with Mister Max can see the client generate a net profit of $1,276,000
+2. An influencer marketing contract with Mister Max can help the client generate a net profit of $1,276,000
 3. If we go with a product placement campaign with DanTDM, this could  generate the client approximately $484,000 per video. If we advance with an influencer marketing campaign deal instead, this would make the client a one-off net profit of $404,000.
-4. NoCopyrightSounds could profit the client $642,000 per video too (which is worth considering) 
+4. NoCopyrightSounds could profit the client $642,000 per video, too (which is worth considering) 
 
 
-
+---
 
 ### Action plan
 - What course of action should we take and why?
 
-Based on our analysis, we beieve the best channel to advance a long-term partnership deal with to promote the client's products is the Dan Rhodes channel. 
+Based on the analysis, I believe the best channel to advance a long-term partnership deal to promote the client's products is the Dan Rhodes channel. 
 
 We'll have conversations with the marketing client to forecast what they also expect from this collaboration. Once we observe we're hitting the expected milestones, we'll advance with potential partnerships with DanTDM, Mister Max and NoCopyrightSounds channels in the future.   
 
-- What steps do we take to implement the recommended decisions effectively?
+- What steps should be taken to implement the recommended decisions effectively?
 
 
 1. Reach out to the teams behind each of these channels, starting with Dan Rhodes
 2. Negotiate contracts within the budgets allocated to each marketing campaign
 3. Kick off the campaigns and track each of their performances against the KPIs
-4. Review how the campaigns have gone, gather insights and optimize based on feedback from converted customers and each channel's audiences 
+4. Review how the campaigns have gone, gather insights, and optimize based on feedback from converted customers and each channel's audiences 
 
 
 
