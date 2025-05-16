@@ -1,8 +1,12 @@
 
+## Top UK YouTubers Channel Analysis
+
+---
+
 ## Dashboard
 ![Dasboard](assets/images/top_uk_youtubers_2024_dashboard.gif)
 
-
+---
 
 # Table of contents 
 
