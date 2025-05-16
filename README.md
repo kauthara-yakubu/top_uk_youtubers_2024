@@ -1,6 +1,4 @@
 
-## Top UK YouTubers Channel Analysis
-
 ---
 
 ## Dashboard
